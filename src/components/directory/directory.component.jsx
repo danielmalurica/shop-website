@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import DirectoryItem from "../directory-item/dicrectory-item.component";
 import "./directory.styles.scss";
 

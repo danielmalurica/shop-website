@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./directory-item.styles.scss";
 
 const DirectoryItem = ({ title, imageUrl }) => {
@@ -9,8 +10,10 @@ const DirectoryItem = ({ title, imageUrl }) => {
         style={{ background: `url(${imageUrl})` }}
       />
       <div className="directory-item-body-container">
-        <h2>{title}</h2>
-        <p>Shop Now</p>
+        <NavLink to={`/shop/` + title.toLowerCase()}>
+          <h2>{title}</h2>
+          <p>Shop Now</p>
+        </NavLink>
       </div>
     </div>
   );
